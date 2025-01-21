@@ -16,6 +16,7 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -27,6 +28,17 @@ body::before {
     height: 100dvh;
     background: rgb(0, 0, 0, 0.15);
     backdrop-filter: blur(15px);
+    z-index: 1; /* Ensure it doesn't overlap other elements with a higher z-index */
+}
+
+.Api-input {
+    position: relative; /* Necessary for z-index to work */
+    z-index: 2; /* Higher than body::before */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    
 }
 
 .main-container {

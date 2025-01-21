@@ -12,10 +12,15 @@ const humidityValueText = document.querySelector('.humidity-value-text')
 const windValueText = document.querySelector('.wind-value-text')
 const weatherSummaryImg = document.querySelector('.weather-summary-img')
 const currentDateText = document.querySelector('.current-date-text')
+const apiKeyInput = document.querySelector('#API_Key')
 
 const forecastItemsContainer = document.querySelector('.forecast-items-container')
 
-const apiKey = 'aaf106b36577517a97f19c6905af4be1'
+// Go to https://openweathermap.org/ and create a account and generate a API Key, then add the API Key below to run the app.
+let apiKey = null
+apiKeyInput.addEventListener("keypress", (e) => {
+    apiKey = e.target.value
+})
 
 searchBtn.addEventListener('click', () => {
     if (cityInput.value.trim() != '') {
