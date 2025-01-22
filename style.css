@@ -41,6 +41,24 @@ body::before {
     
 }
 
+.Api-input input {
+    width: 100%; /* Adjust width as needed */
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc; /* Adds a visible border */
+    border-radius: 4px; /* Makes edges rounded */
+    background-color: #fff; /* Background color for the input */
+    color: #000; /* Text color */
+    font-size: 16px; /* Readable font size */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.Api-input input:focus {
+    border-color: #007bff; /* Changes border color when focused */
+    outline: none; /* Removes default focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds a subtle glow */
+}
+
 .main-container {
     border: solid;
     width: 300px;
